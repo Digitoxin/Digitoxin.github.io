@@ -1,0 +1,15 @@
+<canvas id="c"></canvas>
+<script>cn=document.getElementById("c")
+c=cn.getContext("2d");
+tx="under construction, brb..."
+a=function(){
+d=new Date();t=d.getTime()
+c.fillStyle="#FFFFFF"
+c.fillRect(0,0,cn.width,cn.height)
+i = tx.length
+while (i-->0){
+px=i*11;py=-Math.abs(Math.sin(t*.001+i*.15))*15+30;
+c.strokeText(tx[i],px,py)
+}
+requestAnimationFrame(a)
+};a()</script>
